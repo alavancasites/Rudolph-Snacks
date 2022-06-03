@@ -887,11 +887,13 @@ a {
 	color: #fff;
 	display: inline-block;
 	text-decoration: none;
+  transition: all .5s ease;
 	&:hover{
 		background: $cor2;
 		transition: all .3s ease;
 		color: #fff;
 		text-decoration: none;
+    transition: all .5s ease;
 	}
 }
 .btn-primary-outline{
@@ -902,11 +904,15 @@ a {
 	color: #fff;
 	display: inline-block;
 	text-decoration: none;
+  transition: all .5s ease;
+  background: none;
 	&:hover{
 		border-color: $cor1;
 		transition: all .3s ease;
 		color: $cor1;
 		text-decoration: none;
+    transition: all .5s ease;
+    background: #fff;
 	}
 }
 .inicial, .quem-somos{
@@ -1048,8 +1054,10 @@ a {
       border-color: #fff;
       color: #fff;
       z-index: 999;
+      transition: all .3s ease;
       &:hover{
         background: $cor2;
+        transition: all .3s ease;
       }
     }
   }
@@ -1060,10 +1068,18 @@ a {
   background-size: 100% 35%;
   background-color: $cor1;
   background-repeat: no-repeat;
+  .slide{
+    border-radius: 20px;
+    overflow: hidden;
+    img{
+      border-radius: 20px;
+    }
+  }
   .btn-primary-outline{
     &:hover{
       border-color: $cor2;
       color: $cor2;
+      transition: all .3s ease;
     }
   }
   h2{
@@ -1331,6 +1347,8 @@ footer{
     width: 90%;
     box-sizing: border-box;
     z-index: 11;
+    height: 45px;
+    transition: all .5s linear;
     img{
       float: right;
       position: relative;
@@ -1339,20 +1357,24 @@ footer{
     .texto{
       display: none;
       transition: all .8s linear;
+      height: 0;
     }
     &:hover{
       background: $cor1;
+      height: 100%;
+      transition: all .3s linear;
       p{
         color: #fff;
         text-align: left;
       }
       .bt{
         display: none;
-        transition: all .8s linear;
+        transition: all .3s linear;
       }
       .texto{
         display: block;
-        transition: all .8s linear;
+        animation: efeito 1s ease-in-out;
+        height: 100%;
       }
     }
   }
@@ -1363,6 +1385,20 @@ footer{
   }
   .texto{
     padding: 25px 15px;
+  }
+}
+@keyframes efeito {
+  0% {
+    height: 0;
+    opacity: 0.35;
+  }
+  100% {
+    height: 100px;
+    opacity: 0.5;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
   }
 }
 .slide-produtos{
@@ -1472,6 +1508,9 @@ form{
   right: 50px;
   bottom: 50px;
   z-index: 9999;
+  img{
+    width: 80px;
+  }
   &:hover{
     opacity: .7;
     transition: all .3s ease;
@@ -1831,6 +1870,7 @@ form{
     padding: 15px;
     box-sizing: border-box;
     background-size: 100% 15%;
+
     h2{
       font-size: 28px;
     }
@@ -1883,7 +1923,7 @@ form{
       }
       .infos{
         display: table;
-        width: 100%;
+        width: 100% !important;
         position: relative;
         right: inherit !important;
         top: inherit !important;
@@ -1896,6 +1936,7 @@ form{
         border-bottom: 1px solid $cor2;
         float: left;
         padding-bottom: 5px;
+        z-index: 0;
 
         img{
           display: none;

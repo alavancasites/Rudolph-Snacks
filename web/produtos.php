@@ -106,28 +106,28 @@
       <h2 class="bold mb-4 mt-4 uppercase">Outros snacks</h2>
       <div class="slide2-produtos mt-5">
         <div>
-          <img src="img/batata-ondulada.png" class="img-responsive" alt="Torresmo gourmet">
+          <img src="img/batata-ondulada-v1.png" class="img-responsive" alt="Torresmo gourmet">
           <h2 class="bold">Batata Ondulada</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut sit amet sagittis magna, ac facilisis risus. Nullam vestibulum, velit non.
           </p>
         </div>
         <div>
-          <img src="img/tortilha.png" class="img-responsive" alt="Torresmo tradicional">
+          <img src="img/tortilha-v1.png" class="img-responsive" alt="Torresmo tradicional">
           <h2 class="bold">TORTILHA SUPER CROCANTE</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut sit amet sagittis magna, ac facilisis risus. Nullam vestibulum, velit non.
           </p>
         </div>
         <div>
-          <img src="img/batata-ondulada.png" class="img-responsive" alt="Torresmo gourmet">
+          <img src="img/batata-ondulada-v1.png" class="img-responsive" alt="Torresmo gourmet">
           <h2 class="bold">Batata Ondulada</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut sit amet sagittis magna, ac facilisis risus. Nullam vestibulum, velit non.
           </p>
         </div>
         <div>
-          <img src="img/tortilha.png" class="img-responsive" alt="Torresmo tradicional">
+          <img src="img/tortilha-v1.png" class="img-responsive" alt="Torresmo tradicional">
           <h2 class="bold">TORTILHA SUPER CROCANTE</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut sit amet sagittis magna, ac facilisis risus. Nullam vestibulum, velit non.
