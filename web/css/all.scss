@@ -1709,24 +1709,47 @@ form{
   .banner{
     height: auto !important;
   }
+  .slide-produtos {
+    .slick-prev {
+      left: 0;
+    }
+    .slick-next {
+      right: 0;
+    }
+  }
   .produtos{
     padding: 15px;
     box-sizing: border-box;
+    display: block;
     h1{
       font-size: 40px;
     }
   }
+  .bg-produtos a:hover{
+    height: auto;
+    padding: 15px;
+  }
   .bg-produtos {
     padding: 15px;
     box-sizing: border-box;
+    display: block;
     .limao{
       display: none;
     }
     h4{
       font-size: 30px;
     }
+    h3{
+      font-size: 28px;
+    }
     h2{
       font-size: 40px;
+      margin-top: 0;
+    }
+    a{
+      width: 100%;
+      position: inherit;
+
     }
   }
   .mobile-hidden{
@@ -1958,6 +1981,14 @@ form{
     }
     .logo{
       width: 150px;
+    }
+  }
+  .slide2-produtos {
+    .slick-prev {
+      left: 0px;
+    }
+    .slick-next {
+      right: 0px;
     }
   }
 }
