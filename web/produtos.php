@@ -62,7 +62,7 @@
         <div class="box">
           <h4 class="bold">Torresmo</h4>
           <p class="font-texto">Pellets tipo Tender Strips</p>
-          <img src="img/torresmo02.png" class="img-responsive" alt="Pellets tipo Tender Strips">
+          <img src="img/torresmo02.png" class="img-responsive imagem-produto" alt="Pellets tipo Tender Strips">
           <a href="javascript:;" class="btn-primary">
             <div class="bt">
               Saiba Mais <img width="25" src="img/down.svg" alt="Ver mais">
@@ -82,7 +82,7 @@
         <div class="box">
           <h4 class="bold">Pururuca</h4>
           <p class="font-texto">Pork Rinds</p>
-          <img src="img/torresmo01.png" class="img-responsive" alt="Pellets tipo Tender Strips">
+          <img src="img/torresmo01.png" class="img-responsive imagem-produto" alt="Pellets tipo Tender Strips">
           <a href="javascript:;" class="btn-primary">
             <div class="bt">
               Saiba Mais <img width="25" src="img/down.svg" alt="Ver mais">
@@ -170,6 +170,7 @@
       slidesToScroll: 3,
       autoplay: true,
       fade: false,
+
       responsive: [{
         breakpoint: 980,
         settings: {
@@ -184,8 +185,8 @@
       arrows: true,
       infinite: true,
       speed: 300,
-      slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       autoplay: true,
       fade: false,
       responsive: [{

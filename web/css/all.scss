@@ -920,13 +920,26 @@ a {
     background-color: inherit !important;
   }
   .top.fixed{
-    background-color: rgba(0, 0, 0, .4) !important;
+    background-color: rgba(0, 0, 0, .9) !important;
   }
 }
 .top.fixed{
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, .9);
   padding: 10px 0 0;
   transition: all .3s linear;
+  height: 80px;
+  .mt-4{
+    margin-top: 20px;
+    transition: all .3s linear;
+  }
+  .logo{
+    transform: scale(.5) !important;
+    transition: all .1s linear;
+    margin-top: -38px
+  }
+  ul{
+    height: 40px;
+  }
 }
 .top{
 	position: fixed;
@@ -936,6 +949,14 @@ a {
   z-index: 999;
   background-color: rgba(0, 0, 0, .4);
   transition: all .3s linear;
+  .mt-4{
+    transition: all .3s linear;
+  }
+  .logo{
+    transform: scale(1) !important;
+    transition: all .1s linear;
+    margin-top: 0;
+  }
 	ul{
 		display: flex;
 		align-items: center;
@@ -1182,7 +1203,7 @@ footer{
   .texto{
     position: absolute;
     left: 0;
-    top:100px;
+    bottom: 50px;
   }
   .ponto{
 
@@ -1222,7 +1243,7 @@ footer{
     .circulo{
       width: 10px;
       height: 10px;
-      background: #838383;
+      background: #262A9B;
       position: absolute;
       border-radius: 100%;
       z-index: 999;
@@ -1251,7 +1272,7 @@ footer{
 
     &:hover {
       .circulo{
-          background: #262A9B;
+          background: $cor1;
           &:hover{
 
           }
@@ -1323,6 +1344,10 @@ footer{
     padding: 0 0 80px;
     display: table;
     width: 100%;
+    .imagem-produto{
+      width: 400px;
+      margin: 0 auto;
+    }
   }
   h2{
     color: $cor1;
@@ -1410,6 +1435,12 @@ footer{
   }
 }
 .slide2-produtos{
+  img{
+    width: 300px;
+  }
+  div{
+    margin: 0 20px;
+  }
   .slick-dots{
     bottom: -45px !important;
   }
@@ -1421,19 +1452,16 @@ footer{
     left: -25px;
   	background-image: url(../img/prev1.svg) !important;
   }
-  div{
-
-  }
   h2{
     color: $cor1;
-    font-size: 40px;
+    font-size: 36px;
     text-transform: uppercase;
     width: 100%;
   }
   p{
     font-size: 16px;
     color: #696969;
-    width: 60%;
+    width: 80%;
   }
 }
 .industria-video{

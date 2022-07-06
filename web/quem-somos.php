@@ -42,7 +42,6 @@
   <section class="bg-mapa font-texto">
     <div class="container">
       <div class="texto">
-        <img src="img/rudolph.svg" width="350" class="img-responsive logo" data-aos="zoom-in" alt="rudolph">
         <h3 class="mt-5 mb-4 uppercase" data-aos="fade-left">
           <strong>No mundo</strong> <br>
           <small>
