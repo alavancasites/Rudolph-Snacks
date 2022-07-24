@@ -29,9 +29,16 @@
       <h3 id="menu-toggle"></h3>
     </div>
     <div class="colunas col-7 mt-4 mobile-hidden" data-aos-duration="700" data-aos="fade-down" >
-      <a class="u-pull-right" href="#"><img src="img/searck.svg"  alt="Busca"></a>
+      <a class="u-pull-right abrir-busca" href="javascript:;"><img src="img/searck.svg" class="icon-busca" alt="Busca"><img class="icon-fechar" src="img/fechar.png" width="24" alt="Fechar"></a>
       <a class="btn-primary mr-2 u-pull-right" href="contato">Comece a vender</a>
-
+    </div>
+    <div class="busca" data-aos-duration="500" data-aos="fade-up" >
+      <form action="" method="post">
+        <input type="text" name="" value="" placeholder="Digite sua busca aqui:">
+        <a href="resultado-busca" class="btn" type="button" name="button">
+          Buscar
+        </a>
+      </form>
     </div>
   </div>
 </header>

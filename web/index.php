@@ -14,6 +14,7 @@ $rotas = array(
 	'/produtos'=>'produtos.php',
 	'/industria'=>'industria.php',
 	'/contato'=>'industria.php',
+	'/resultado-busca'=>'resultado-busca.php',
 	'/politica-de-privacidade'=>'politica.php',
 );
 $request_manager = new RequestManager();

@@ -1302,6 +1302,55 @@ footer{
     }
   }
 }
+.busca{
+  width: 700px;
+  position: absolute;
+  right: 0;
+  top:90px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #f2f2f2;
+  display: none;
+  form{
+    input{
+      width: 89%;
+      margin-top: 0;
+      padding: 15px;
+
+    }
+    .btn{
+      background: $cor2;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      float: right;
+      &:hover{
+        background: $cor1;
+        transition: all .3s ease;
+      }
+    }
+  }
+}
+.abrir-busca{
+  .icon-busca{
+    display: block;
+  }
+  .icon-fechar{
+    display: none;
+  }
+}
+.abrir-busca.ativo{
+  .icon-busca{
+    display: none;
+  }
+  .icon-fechar{
+    display: block;
+  }
+}
+.busca.aberto{
+  display: block;
+}
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -1587,7 +1636,7 @@ form{
   background-repeat: no-repeat;
   padding-top: 280px;
   font-size: 20px;
-  background-size: auto 100%;
+  background-repeat: repeat-y;
   padding-bottom: 80px;
   box-sizing: border-box;
   padding-left: 15px;

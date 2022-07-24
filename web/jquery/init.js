@@ -42,6 +42,11 @@ $(document).ready(function () {
     $('.window').hide();
   });
 
+  $(".abrir-busca").click(function() {
+    $(this).toggleClass('ativo');
+    $(".busca").toggleClass('aberto');
+  });
+
 
   $(document).on("scroll", function () {
     if ($(document).scrollTop() > 70) {
