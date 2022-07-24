@@ -10,7 +10,7 @@
         Da fábrica ao PDV,
         tudo pronto pra você.
       </h2>
-      <a href="#" class="btn-primary">Descubra mais</a>
+      <a href="produtos" class="btn-primary">Descubra mais</a>
     </div>
   </div>
   <div>
@@ -24,7 +24,7 @@
         Da fábrica ao PDV,
         tudo pronto pra você.
       </h2>
-      <a href="#" class="btn-primary">Descubra mais</a>
+      <a href="produtos" class="btn-primary">Descubra mais</a>
     </div>
   </div>
 </section>
