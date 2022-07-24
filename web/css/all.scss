@@ -1334,7 +1334,7 @@ footer{
 }
 .abrir-busca{
   .icon-busca{
-    display: block;
+    display: initial;
   }
   .icon-fechar{
     display: none;
@@ -1345,7 +1345,7 @@ footer{
     display: none;
   }
   .icon-fechar{
-    display: block;
+    display: initial;
   }
 }
 .busca.aberto{
@@ -1748,6 +1748,14 @@ form{
 }
 @media (max-width: 769px)
 {
+  .busca{
+    width: 97%;
+    margin: 5px;
+    top:350px;
+    form input{
+      width: 78%;
+    }
+  }
   .popup-texto{
     video{
       height: auto;

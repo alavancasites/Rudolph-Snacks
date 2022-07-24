@@ -19,6 +19,9 @@
           <li class="dekstop-hidden">
             <a class="btn-primary mr-3 u-pull-left" href="contato">Comece a vender</a>
           </li>
+          <li class="dekstop-hidden">
+            <a class="u-pull-right abrir-busca" href="javascript:;"><img src="img/searck.svg" class="icon-busca" alt="Busca"><img class="icon-fechar" src="img/fechar.png" width="24" alt="Fechar"></a>
+          </li>
         </ul>
       </nav>
     </div>
