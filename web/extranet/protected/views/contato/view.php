@@ -66,6 +66,12 @@ $this->breadcrumbs[] = Yii::t('app','Visualizar');
         </div>
         <div class="formSep">
           <dl class="dl-horizontal">
+            <dt><?=Util::formataTexto($model->getAttributeLabel('aceite'));?></dt>
+            <dd><?=Util::formataTexto($model->aceite ? 'Sim' : 'Não')?></dd>
+          </dl>
+        </div>
+        <div class="formSep">
+          <dl class="dl-horizontal">
             <dt><?=Util::formataTexto($model->getAttributeLabel('ativo'));?></dt>
             <dd><?=Util::formataTexto($model->ativo ? 'Sim' : 'Não')?></dd>
           </dl>

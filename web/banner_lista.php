@@ -1,30 +1,36 @@
 <section class="banner">
-  <div>
-    <picture>
-      <source media="(max-width: 1000px)" srcset="img/banner-mob-v1.jpg">
-      <source media="(min-width: 1800px)" srcset="img/banner.jpg">
-      <img src="img/banner.jpg" class="img-responsive center-block" alt="Da fábrica ao PDV, tudo pronto pra você">
-    </picture>
-    <div class="infos">
-      <h2 class="bold uppercase">
-        Da fábrica ao PDV,
-        tudo pronto pra você.
-      </h2>
-      <a href="produtos" class="btn-primary">Descubra mais</a>
+  <?php
+    $criteria = new CDbCriteria();
+    $criteria->order = 'idbanner desc';
+    $criteria->addCondition("ativo = 1");
+    $banners = Banner::model()->findAll($criteria);
+    foreach($banners as $banner) {
+      if ($banner->externo==1){
+        $target = "target='_blank' rel='noopener'";
+      }else{ 
+        $target = '';
+      }
+  ?>
+    <div>
+      <picture>
+      <? 
+        if ($banner->imagem_responsiva1 != NULL){
+      ?>
+        <source media="(max-width: 1000px)" srcset="extranet/uploads/Banner/<?=$banner->imagem_responsiva2?>">
+      <? 
+        } if ($banner->imagem_responsiva1 != NULL){
+      ?>
+        <source media="(min-width: 1800px)" srcset="extranet/uploads/Banner/<?=$banner->imagem_responsiva1?>">
+      <? 
+        }
+      ?>        
+        <img src="extranet/uploads/Banner/<?=$banner->imagem?>" class="img-responsive center-block" alt="<?=$banner->titulo?>">
+      </picture>
+      <div class="infos"><?=$banner->titulo?></h2>
+        <a href="<?=$banner->link?>" <?=$target?> class="btn-primary"><?=$banner->botao?></a>
+      </div>
     </div>
-  </div>
-  <div>
-    <picture>
-      <source media="(max-width: 1000px)" srcset="img/banner-mob-v1.jpg">
-      <source media="(min-width: 1800px)" srcset="img/banner.jpg">
-      <img src="img/banner.jpg" class="img-responsive center-block" alt="Da fábrica ao PDV, tudo pronto pra você">
-    </picture>
-    <div class="infos">
-      <h2 class="bold uppercase">
-        Da fábrica ao PDV,
-        tudo pronto pra você.
-      </h2>
-      <a href="produtos" class="btn-primary">Descubra mais</a>
-    </div>
-  </div>
+  <?php
+    }
+  ?>
 </section>

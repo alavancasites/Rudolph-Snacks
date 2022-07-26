@@ -69,11 +69,13 @@
             </div>
             <div class="texto">
               <h3 class="bold">MAIS CONSUMIDO DO QUE NUNCA</h3>
+              <div class="mt30">
               <p>
                 Pesquisas recentes com os consumidores de Pururuca mostram que os mesmos são extremamente apaixonados pelo produto.
                 Em muitos casos, as pessoas relatam que o leve sabor de bacon defumado encontrado no produto traz lembranças da infância e da família. Outros afirmam que o produto trás lembranças de férias onde puderam experimentar o produto na sua região típica.
                 Como muitos alimentos, a pururuca é parte de uma tradição cultural relacionada com influências étnicas e regionais. Por exemplo, a pururuca suína e suas variações é um salgadinho favorito entre os latinos, americanos e europeus.
               </p>
+              </div>
             </div>
           </a>
         </div>

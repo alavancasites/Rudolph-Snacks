@@ -1,7 +1,7 @@
 <?
 return array(
     'host' => 'localhost',
-    'db' => 'sistema_padrao',
+    'db' => 'rudolph',
     'username' => 'root',
     'password' => '',
 );

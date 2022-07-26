@@ -28,7 +28,7 @@
       	</dd>
        </dl>
     </div>
-    <!-- row -->
+    
         	    
     <div class="formSep">
         <dl class="dl-horizontal">
@@ -51,7 +51,7 @@
       	</dd>
        </dl>
     </div>
-    <!-- row -->
+    
         	    
     <div class="formSep">
         <dl class="dl-horizontal">
@@ -63,7 +63,7 @@
       	</dd>
        </dl>
     </div>
-    <!-- row -->
+    
         	    
     <div class="formSep">
         <dl class="dl-horizontal">
@@ -75,7 +75,7 @@
       	</dd>
        </dl>
     </div>
-    <!-- row -->
+    
         	    
     <div class="formSep">
         <dl class="dl-horizontal">
@@ -87,7 +87,7 @@
       	</dd>
        </dl>
     </div>
-    <!-- row -->
+    
         	    
     <div class="formSep">
         <dl class="dl-horizontal">
@@ -99,7 +99,7 @@
       	</dd>
        </dl>
     </div>
-    <!-- row -->
+    
         	    
     <div class="formSep">
         <dl class="dl-horizontal">
@@ -111,7 +111,19 @@
       	</dd>
        </dl>
     </div>
-    <!-- row -->
+    
+        	    
+    <div class="formSep">
+        <dl class="dl-horizontal">
+          <dt><?php echo $form->labelEx($model,'aceite',array('class'=>'control-label')); ?>
+</dt>
+          <dd>
+		  	<?php echo $form->checkBox($model, 'aceite'); ?>                 
+		 	 
+      	</dd>
+       </dl>
+    </div>
+    
         	    
     <div class="formSep">
         <dl class="dl-horizontal">
@@ -123,7 +135,7 @@
       	</dd>
        </dl>
     </div>
-    <!-- row -->
+    
             
     
    
