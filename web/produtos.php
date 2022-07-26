@@ -1,52 +1,43 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
-
 <head profile="http://gmpg.org/xfn/11">
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  <title>Produtos - Rudolph Snaks</title>
-  <?php include("header.php"); ?>
-  <style type="text/css">
-    <?php echo file_get_contents ('css/slick.css');
-    ?>
-    <?php echo file_get_contents ('css/slick-theme.css');
-    ?>
-  </style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Produtos - Rudolph Snaks</title>
+<?php include("header.php"); ?>
+<style type="text/css"><?php echo file_get_contents ('css/slick.css');?><?php echo file_get_contents ('css/slick-theme.css');?></style>
 </head>
-
 <body>
   <div id="topo"><?php include("topo.php"); ?></div>
   <div class="clear"></div>
   <section class="banner-produtos">
-    <div>
-      <img src="img/banner-produtos.jpg" class="img-responsive" alt="Torresmo e Pururuca como você nunca viu">
-    </div>
-    <div>
-      <img src="img/banner-produtos.jpg" class="img-responsive" alt="Torresmo e Pururuca como você nunca viu">
-    </div>
+  <?php
+    $criteria = new CDbCriteria();
+    $criteria->order = 'idbanner_produto desc';
+    $criteria->addCondition("ativo = 1");
+    $banners = BannerProduto::model()->findAll($criteria);
+    foreach($banners as $banner) {
+  ?>
+    <div><img src="extranet/uploads/BannerProduto/<?=$banner->imagem?>" class="img-responsive" alt="<?=$banner->titulo?>"></div>
+  <?php
+    }
+  ?>
   </section>
   <div class="clear"></div>
   <section class="produtos">
     <div class="container">
       <h1 class="bold text-center mb-4 mt-4" data-aos-duration="700" data-aos="fade-left">DO JEITO QUE VOCÊ QUISER</h1>
       <div class="slide-produtos">
-        <div>
-          <img src="img/torresmo-gourmet.png" class="img-responsive" alt="Torresmo gourmet">
-        </div>
-        <div>
-          <img src="img/torresmo-tradicional.png" class="img-responsive" alt="Torresmo tradicional">
-        </div>
-        <div>
-          <img src="img/torresmo-microondas.png" class="img-responsive" alt="Torresmo Micro-ondas">
-        </div>
-        <div>
-          <img src="img/torresmo-gourmet.png" class="img-responsive" alt="Torresmo gourmet">
-        </div>
-        <div>
-          <img src="img/torresmo-tradicional.png" class="img-responsive" alt="Torresmo tradicional">
-        </div>
-        <div>
-          <img src="img/torresmo-microondas.png" class="img-responsive" alt="Torresmo Micro-ondas">
-        </div>
+        <?php
+          $criteria = new CDbCriteria();
+          $criteria->order = 'idpersonalizado desc';
+          $criteria->addCondition("ativo = 1");
+          $personalizados = Personalizado::model()->findAll($criteria);
+          foreach($personalizados as $personalizado) {
+        ?>
+          <div><img src="extranet/uploads/Personalizado/<?=$personalizado->imagem?>" class="img-responsive" alt="<?=$personalizado->imagem?>"></div>
+        <?php
+          }
+        ?>
       </div>
       <h2 class="font-texto text-center mt-4 mb-4" data-aos-duration="700" data-aos="fade-right">Um produto versátil que permite diferentes sabores. Quem escolhe é você.</h2>
     </div>
@@ -58,89 +49,59 @@
         <h2 class="bold mb-4 mt-4" data-aos-duration="400" data-aos="fade-left">PRODUTOS</h2>
       </div>
       <div class="clear"></div>
-      <div class="colunas col-10 z-index" data-aos-duration="400" data-aos="fade-up" >
-        <div class="box">
-          <h4 class="bold">Torresmo</h4>
-          <p class="font-texto">Pellets tipo Tender Strips</p>
-          <img src="img/torresmo02.png" class="img-responsive imagem-produto" alt="Pellets tipo Tender Strips">
-          <a href="javascript:;" class="btn-primary">
-            <div class="bt">
-              Saiba Mais <img width="25" src="img/down.svg" alt="Ver mais">
+      <div>
+        <?php
+          $criteria = new CDbCriteria();
+          $criteria->order = 'idproduto desc';
+          $criteria->addCondition("ativo = 1");
+          $produtos = Produto::model()->findAll($criteria);
+          foreach($produtos as $produto) {
+        ?>
+          <div class="colunas col-10 z-index" data-aos-duration="400" data-aos="fade-up">
+            <div class="box">
+              <h4 class="bold"><?=$produto->nome?></h4>
+              <p class="font-texto"><?=$produto->subtitulo?></p>
+              <img src="extranet/uploads/Produto/<?=$produto->imagem?>" class="img-responsive imagem-produto" alt="<?=$produto->nome?>">
+              <a href="javascript:;" class="btn-primary">
+                <div class="bt">
+                  Saiba Mais <img width="25" src="img/down.svg" alt="Ver mais">
+                </div>
+                <div class="texto">
+                  <h3 class="bold"><?=$produto->titulo?></h3>
+                  <div class="mt30"><?=$produto->texto?></div>
+                </div>
+              </a>
             </div>
-            <div class="texto">
-              <h3 class="bold">MAIS CONSUMIDO DO QUE NUNCA</h3>
-              <div class="mt30">
-              <p>
-                Pesquisas recentes com os consumidores de Pururuca mostram que os mesmos são extremamente apaixonados pelo produto.
-                Em muitos casos, as pessoas relatam que o leve sabor de bacon defumado encontrado no produto traz lembranças da infância e da família. Outros afirmam que o produto trás lembranças de férias onde puderam experimentar o produto na sua região típica.
-                Como muitos alimentos, a pururuca é parte de uma tradição cultural relacionada com influências étnicas e regionais. Por exemplo, a pururuca suína e suas variações é um salgadinho favorito entre os latinos, americanos e europeus.
-              </p>
-              </div>
-            </div>
-          </a>
-        </div>
+          </div>
+        <?php
+          }
+        ?>
       </div>
-      <div class="colunas col-10 z-index" data-aos-duration="700" data-aos="fade-up">
-        <div class="box">
-          <h4 class="bold">Pururuca</h4>
-          <p class="font-texto">Pork Rinds</p>
-          <img src="img/torresmo01.png" class="img-responsive imagem-produto" alt="Pellets tipo Tender Strips">
-          <a href="javascript:;" class="btn-primary">
-            <div class="bt">
-              Saiba Mais <img width="25" src="img/down.svg" alt="Ver mais">
-            </div>
-            <div class="texto">
-              <h3 class="bold">MAIS CONSUMIDO DO QUE NUNCA</h3>
-              <p>
-                Pesquisas recentes com os consumidores de Pururuca mostram que os mesmos são extremamente apaixonados pelo produto.
-                Em muitos casos, as pessoas relatam que o leve sabor de bacon defumado encontrado no produto traz lembranças da infância e da família. Outros afirmam que o produto trás lembranças de férias onde puderam experimentar o produto na sua região típica.
-                Como muitos alimentos, a pururuca é parte de uma tradição cultural relacionada com influências étnicas e regionais. Por exemplo, a pururuca suína e suas variações é um salgadinho favorito entre os latinos, americanos e europeus.
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-
     </div>
     <div class="clear"></div>
     <div class="container">
       <br><br><br><br><br><br>
       <h2 class="bold mb-4 mt-4 uppercase">Outros snacks</h2>
       <div class="slide2-produtos mt-5">
-        <div>
-          <img src="img/batata-ondulada-v1.png" class="img-responsive" alt="Torresmo gourmet">
-          <h2 class="bold">Batata Ondulada</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut sit amet sagittis magna, ac facilisis risus. Nullam vestibulum, velit non.
-          </p>
-        </div>
-        <div>
-          <img src="img/tortilha-v1.png" class="img-responsive" alt="Torresmo tradicional">
-          <h2 class="bold">TORTILHA SUPER CROCANTE</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut sit amet sagittis magna, ac facilisis risus. Nullam vestibulum, velit non.
-          </p>
-        </div>
-        <div>
-          <img src="img/batata-ondulada-v1.png" class="img-responsive" alt="Torresmo gourmet">
-          <h2 class="bold">Batata Ondulada</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut sit amet sagittis magna, ac facilisis risus. Nullam vestibulum, velit non.
-          </p>
-        </div>
-        <div>
-          <img src="img/tortilha-v1.png" class="img-responsive" alt="Torresmo tradicional">
-          <h2 class="bold">TORTILHA SUPER CROCANTE</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.Ut sit amet sagittis magna, ac facilisis risus. Nullam vestibulum, velit non.
-          </p>
-        </div>
+        <?php
+          $criteria = new CDbCriteria();
+          $criteria->order = 'idsnack desc';
+          $criteria->addCondition("ativo = 1");
+          $snacks = Snack::model()->findAll($criteria);
+          foreach($snacks as $snack) {
+        ?>
+          <div>
+            <img src="extranet/uploads/Snack/<?=$snack->imagem?>" class="img-responsive" alt="<?=$snack->titulo?>">
+            <h2 class="bold"><?=$snack->titulo?></h2>
+            <div><?=$snack->texto?></div>
+          </div>
+        <?php
+          }
+        ?>
       </div>
     </div>
-
   </section>
   <img src="img/infografico.png" class="img-responsive" alt="infografico">
-
   <div class="clear"></div>
   <footer><?php include("rodape.php"); ?></footer>
   <?php include("scripts.php"); ?>

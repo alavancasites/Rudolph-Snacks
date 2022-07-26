@@ -2,6 +2,7 @@
 ini_set ("default_charset","");
 include_once("gzip/gzipHTML.php");
 include_once("extranet/autoload.php");
+session_start();
 include_once("RequestManager.php");
 $rotas = array(
 	'/empresa'=> 'empresa.php',
