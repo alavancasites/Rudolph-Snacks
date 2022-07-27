@@ -20,17 +20,14 @@ $(document).ready(function () {
   var mascaraHeight = $(document).height();
   var mascaraWidth = $(window).width();
 
-  $('#mascara').css({
-    'width': mascaraWidth,
-    'height': mascaraHeight
-  });
+
   $('#mascara').fadeIn(1000);
   $('#mascara').fadeTo("slow", 0.8);
 
-  var winH = $(window).height();
-  var winW = $(window).width();
-  $caixa.css('top', winH / 2 - $caixa.height() / 1);
-  $caixa.css('left', winW / 2 - $caixa.width() / 2);
+  //var winH = $(window).height();
+  //var winW = $(window).width();
+  //$caixa.css('top', winH / 2 - $caixa.height() / 1);
+  //$caixa.css('left', winW / 2 - $caixa.width() / 2);
   $caixa.fadeIn(2000);
   $('.window .fechar').click(function (e) {
     e.preventDefault();

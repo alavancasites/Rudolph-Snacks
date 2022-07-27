@@ -34,7 +34,7 @@ $form = new CActiveForm();
 <section class="industria-video">
   <div class="container">
     <h2 class="bold" data-aos-duration="500" data-aos="fade-left"> TUDO O QUE A <br>
-      RUDOLPH <strong class="especial">Snaks</strong> É: </h2>
+      RUDOLPH <strong class="especial">Snacks</strong> É: </h2>
     <div class="clear"></div>
     <div class="colunas col-18 off-1 mt-5">
       <video width="100%" height="500" controls>
@@ -114,9 +114,9 @@ $form = new CActiveForm();
       function PegarUrl(){
     		var newURL =  window.location.pathname;
     		var resultado = newURL.split("/");
-        console.log(resultado[2]);
+        console.log(resultado[4]);
     		$('html, body').animate({
-    			scrollTop: $("#" +resultado[2]).offset().top - 200
+    			scrollTop: $("#" +resultado[4]).offset().top - 200
     		}, 500);
     	}
     	PegarUrl();

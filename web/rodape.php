@@ -1,4 +1,4 @@
-<a href="#" class="whats"><img src="img/whats.svg" alt="whatsApp"></a>
+<a target="_blanck" href="https://api.whatsapp.com/send?phone=554141220011&text=Ol%C3%A1" class="whats"><img src="img/whats.svg" alt="whatsApp"></a>
 <footer>
 	<div class="container">
 		<div class="text-center mb-4">

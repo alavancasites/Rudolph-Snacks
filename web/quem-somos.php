@@ -27,7 +27,9 @@
           </p>
         </div>
         <div class="colunas col-11" data-aos-duration="400" data-aos="fade-right">
-          <img src="img/mapa.png"  alt="  A maior marca  de torresmo e pururuca do mundo.">
+          <div class="mapa-border mt-4">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1061.9761309515586!2d-49.08331649689193!3d-25.462242310786884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcf3146a23afd3%3A0x2d41749474bbbe50!2sRudolph%20Snacks%20Brasil!5e1!3m2!1spt-BR!2sbr!4v1658962570176!5m2!1spt-BR!2sbr" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </div>
